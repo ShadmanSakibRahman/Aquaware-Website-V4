@@ -580,7 +580,7 @@ function AboutPage() {
 const KNOWLEDGE_IMAGES = [
   '/assets/rwzi-zwolle-2.jpg',
   '/assets/Lozingen_afvalstoffen_bedreigen_waterkwaliteit_-_Drinkwaterplatform.jpeg',
-  '/assets/shutterstock_1926382847-1.jpg',
+  '/assets/martensmultimedia-20220710-1495.jpg.webp',
   '/assets/Handhaving.jpg',
   '/assets/de-zuid-willemsvaart-vervuild-afvalwater-dreigt-via-de-rioolwaterzuivering-van-weert-in-dit-kanaal-te-belanden.webp',
 ]
