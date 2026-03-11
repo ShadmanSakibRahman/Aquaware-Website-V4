@@ -41,29 +41,29 @@ function WaterCanvas() {
 
       ctx.clearRect(0, 0, width, height)
 
-      // ── Deep background gradient ──
+      // ── Light background gradient ──
       const bg = ctx.createLinearGradient(0, 0, 0, height)
-      bg.addColorStop(0,   '#050d18')
-      bg.addColorStop(0.5, '#071424')
-      bg.addColorStop(1,   '#030a14')
+      bg.addColorStop(0,   '#eaf5fc')
+      bg.addColorStop(0.5, '#dceef8')
+      bg.addColorStop(1,   '#f0f7fc')
       ctx.fillStyle = bg
       ctx.fillRect(0, 0, width, height)
 
-      // ── Soft radial glow (depth) ──
+      // ── Soft radial glow ──
       const glow = ctx.createRadialGradient(width * 0.5, height * 0.28, 0, width * 0.5, height * 0.28, width * 0.65)
-      glow.addColorStop(0,   'rgba(0,80,160,0.22)')
-      glow.addColorStop(0.5, 'rgba(0,40,100,0.1)')
+      glow.addColorStop(0,   'rgba(160,220,240,0.2)')
+      glow.addColorStop(0.5, 'rgba(180,230,245,0.1)')
       glow.addColorStop(1,   'transparent')
       ctx.fillStyle = glow
       ctx.fillRect(0, 0, width, height)
 
       // ── Layered water surface waves ──
       const layers = [
-        { amp: 55, freq: 0.0055, speed: 1.0, y: height * 0.35, alpha: 0.07, color: '#1a7fd4' },
-        { amp: 38, freq: 0.008,  speed: 1.4, y: height * 0.42, alpha: 0.08, color: '#0097b2' },
-        { amp: 28, freq: 0.012,  speed: 0.9, y: height * 0.50, alpha: 0.10, color: '#00c8d4' },
-        { amp: 18, freq: 0.018,  speed: 1.7, y: height * 0.56, alpha: 0.09, color: '#00e5f0' },
-        { amp: 12, freq: 0.025,  speed: 2.1, y: height * 0.62, alpha: 0.06, color: '#00c8d4' },
+        { amp: 55, freq: 0.0055, speed: 1.0, y: height * 0.35, alpha: 0.06, color: '#6cc4e0' },
+        { amp: 38, freq: 0.008,  speed: 1.4, y: height * 0.42, alpha: 0.07, color: '#4db8d4' },
+        { amp: 28, freq: 0.012,  speed: 0.9, y: height * 0.50, alpha: 0.08, color: '#3aafc8' },
+        { amp: 18, freq: 0.018,  speed: 1.7, y: height * 0.56, alpha: 0.07, color: '#28a5be' },
+        { amp: 12, freq: 0.025,  speed: 2.1, y: height * 0.62, alpha: 0.05, color: '#1e9bb5' },
       ]
 
       layers.forEach((layer) => {
@@ -104,7 +104,7 @@ function WaterCanvas() {
         const cy = (Math.sin(t.current * 0.2 + i * 0.7) * 0.5 + 0.5) * height * 0.7
         const cr = 60 + Math.sin(t.current * 0.5 + i) * 30
         const cg = ctx.createRadialGradient(cx, cy, 0, cx, cy, cr)
-        cg.addColorStop(0,   `rgba(0,200,212,${0.025 + Math.sin(t.current + i) * 0.01})`)
+        cg.addColorStop(0,   `rgba(100,200,230,${0.04 + Math.sin(t.current + i) * 0.015})`)
         cg.addColorStop(1,   'transparent')
         ctx.fillStyle = cg
         ctx.beginPath()
@@ -116,11 +116,11 @@ function WaterCanvas() {
       for (let i = 0; i < 24; i++) {
         const px = ((Math.sin(t.current * 0.15 + i * 2.3) * 0.5 + 0.5) * width)
         const py = ((Math.sin(t.current * 0.12 + i * 1.7) * 0.5 + 0.5) * height * 0.85)
-        const pr = 1 + Math.sin(t.current + i * 0.9) * 0.5
-        const alpha = (0.25 + Math.sin(t.current * 0.7 + i) * 0.2) * (i % 4 === 0 ? 1.5 : 1)
+        const pr = 1.2 + Math.sin(t.current + i * 0.9) * 0.6
+        const alpha = (0.18 + Math.sin(t.current * 0.7 + i) * 0.12) * (i % 4 === 0 ? 1.3 : 1)
         ctx.beginPath()
         ctx.arc(px, py, pr, 0, Math.PI * 2)
-        ctx.fillStyle = `rgba(0, 200, 212, ${Math.max(0, alpha)})`
+        ctx.fillStyle = `rgba(60, 180, 210, ${Math.max(0, alpha)})`
         ctx.fill()
       }
 
@@ -134,21 +134,21 @@ function WaterCanvas() {
         }
         ctx.beginPath()
         ctx.arc(ripple.x, ripple.y, ripple.r, 0, Math.PI * 2)
-        ctx.strokeStyle = `rgba(0, 200, 212, ${ripple.opacity * 0.5})`
+        ctx.strokeStyle = `rgba(60, 180, 210, ${ripple.opacity * 0.35})`
         ctx.lineWidth = 1
         ctx.stroke()
         // inner
         if (ripple.r > 20) {
           ctx.beginPath()
           ctx.arc(ripple.x, ripple.y, ripple.r * 0.55, 0, Math.PI * 2)
-          ctx.strokeStyle = `rgba(0, 220, 240, ${ripple.opacity * 0.25})`
+          ctx.strokeStyle = `rgba(80, 195, 225, ${ripple.opacity * 0.18})`
           ctx.lineWidth = 0.5
           ctx.stroke()
         }
       })
 
       // ── Subtle grid / depth lines ──
-      ctx.strokeStyle = 'rgba(0,180,220,0.025)'
+      ctx.strokeStyle = 'rgba(100,190,220,0.04)'
       ctx.lineWidth = 0.5
       for (let gx = 0; gx < width; gx += 90) {
         ctx.beginPath()
@@ -241,9 +241,9 @@ function SiteShell() {
       <header className={`top-nav ${scrolled ? 'scrolled' : ''}`}>
         <Link to='/' className='brand'>
           <svg width='28' height='28' viewBox='0 0 28 28' fill='none'>
-            <circle cx='14' cy='14' r='13' stroke='#00c8d4' strokeWidth='1.5' />
-            <path d='M7 18c2-4 5-8 7-8s5 4 7 8' stroke='#00c8d4' strokeWidth='1.5' strokeLinecap='round' />
-            <path d='M9 16c1.5-2.5 3-4 5-4s3.5 1.5 5 4' stroke='#1a7fd4' strokeWidth='1' strokeLinecap='round' opacity='0.7' />
+            <circle cx='14' cy='14' r='13' stroke='#00a5b5' strokeWidth='1.5' />
+            <path d='M7 18c2-4 5-8 7-8s5 4 7 8' stroke='#00a5b5' strokeWidth='1.5' strokeLinecap='round' />
+            <path d='M9 16c1.5-2.5 3-4 5-4s3.5 1.5 5 4' stroke='#0b7dda' strokeWidth='1' strokeLinecap='round' opacity='0.7' />
           </svg>
           <span className='brand-wordmark'>Aqua<span>Ware</span></span>
         </Link>
@@ -752,8 +752,8 @@ function SiteFooter() {
           <div className='footer-brand'>
             <Link to='/' style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
               <svg width='24' height='24' viewBox='0 0 28 28' fill='none'>
-                <circle cx='14' cy='14' r='13' stroke='#00c8d4' strokeWidth='1.5' />
-                <path d='M7 18c2-4 5-8 7-8s5 4 7 8' stroke='#00c8d4' strokeWidth='1.5' strokeLinecap='round' />
+                <circle cx='14' cy='14' r='13' stroke='#00a5b5' strokeWidth='1.5' />
+                <path d='M7 18c2-4 5-8 7-8s5 4 7 8' stroke='#00a5b5' strokeWidth='1.5' strokeLinecap='round' />
               </svg>
               <span style={{ fontFamily: 'Syne, sans-serif', fontWeight: 700, fontSize: '1.1rem', letterSpacing: '-0.02em' }}>
                 Aqua<span style={{ color: 'var(--aqua)' }}>Ware</span>

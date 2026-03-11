@@ -9,7 +9,10 @@
       "Bash(where gh:*)",
       "Bash(winget install:*)",
       "Bash(export PATH=\"$PATH:/c/Program Files/GitHub CLI\" && \"/c/Program Files/GitHub CLI/gh.exe\" auth status 2>&1)",
-      "Bash(echo \"\" | \"/c/Program Files/GitHub CLI/gh.exe\" auth login --web -p https 2>&1)"
+      "Bash(echo \"\" | \"/c/Program Files/GitHub CLI/gh.exe\" auth login --web -p https 2>&1)",
+      "Bash(\"/c/Program Files/GitHub CLI/gh.exe\" repo create Aquaware-Website-V3 --public --description \"AquaWare - Next-Gen Water Quality Management Platform | Data-driven platform for controlling indirect industrial discharges\" --source \"D:/AquaWare Website V3\" --remote origin --push 2>&1)",
+      "Bash(cd \"D:/AquaWare Website V3\" && npm install 2>&1)",
+      "Bash(cd \"D:/AquaWare Website V3\" && npm run dev 2>&1)"
     ]
   }
 }
