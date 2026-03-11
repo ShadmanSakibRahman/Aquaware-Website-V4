@@ -854,6 +854,13 @@ p  { color: var(--muted); font-size: 1.025rem; line-height: 1.72; }
   box-shadow: var(--shadow-card);
 }
 .article-section h2 { font-size: 1.4rem; margin-bottom: 0.8rem; }
+.article-section-img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  margin-bottom: 1.25rem;
+}
 .article-section p  { margin-bottom: 0.75rem; }
 .article-section p:last-child { margin-bottom: 0; }
 .related-links { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1rem; }

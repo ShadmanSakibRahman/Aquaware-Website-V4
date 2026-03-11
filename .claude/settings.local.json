@@ -18,7 +18,10 @@
       "Bash(npx vercel:*)",
       "Bash(npx netlify-cli:*)",
       "Bash(cd \"D:/AquaWare Website V3\" && npm install --save-dev gh-pages 2>&1)",
-      "Bash(cd \"D:/AquaWare Website V3\" && npm run build 2>&1 && cp dist/index.html dist/404.html)"
+      "Bash(cd \"D:/AquaWare Website V3\" && npm run build 2>&1 && cp dist/index.html dist/404.html)",
+      "Bash(cd \"D:/AquaWare Website V3\" && npx vite --port 5173 2>&1)",
+      "WebFetch(domain:www.aquaware.nl)",
+      "Bash(curl -L -o \"D:/AquaWare Website V3/public/assets/shutterstock_1056782819-1-watervergunning-lozing-gevaarlijke-stoffen.jpg.avif\" \"https://www.aquaware.nl/shutterstock_1056782819-1-watervergunning-lozing-gevaarlijke-stoffen.jpg.avif\" 2>&1 | tail -3)"
     ]
   }
 }

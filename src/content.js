@@ -244,7 +244,7 @@ export const knowledge = {
 export const knowledgeArticles = {
   '1': {
     title: 'Substances of Very High Concern (SVHC): the silent route of indirect discharges',
-    image: '/assets/49552108256_73fa5f3085_b.jpg',
+    image: '/assets/rwzi-zwolle-2.jpg',
     related: ['2', '3'],
     sections: [
       {
@@ -266,6 +266,8 @@ export const knowledgeArticles = {
       },
       {
         heading: 'Indirect discharges',
+        image: '/assets/shutterstock_1056782819-1-watervergunning-lozing-gevaarlijke-stoffen.jpg.avif',
+        imageAlt: 'A WWTP like here in Zwolle',
         paragraphs: [
           'When people think of discharges, they often picture a factory pipe that ends directly in a river. Yet a significant share of chemical emissions reaches water via another route: indirect discharges.',
           'This process proceeds in three steps:',
@@ -294,7 +296,7 @@ export const knowledgeArticles = {
   },
   '2': {
     title: 'Indirect discharges: from blind spot to clear picture',
-    image: '/assets/ad09d958633e334321c7ebfaa2f7e1a14014256466d0f8a47593fdf398e7ecb4.jpg',
+    image: '/assets/shutterstock_1926382847-1.jpg',
     related: ['1', '3'],
     sections: [
       {
@@ -306,6 +308,8 @@ export const knowledgeArticles = {
       },
       {
         heading: 'Why indirect discharges are difficult to see',
+        image: '/assets/shutterstock_1926382847-1.jpg',
+        imageAlt: 'Discharge pipe releasing wastewater into surface water',
         paragraphs: [
           'There are several reasons why indirect industrial discharges are less visible:',
           'Historical focus on direct dischargers — For decades the emphasis in permits and monitoring was on large companies that discharge directly. Indirect routes were more fragmented and therefore less systematically visible.',
@@ -317,6 +321,8 @@ export const knowledgeArticles = {
       },
       {
         heading: 'The role of WWTPs and industrial estates',
+        image: '/assets/49552108256_73fa5f3085_b.jpg',
+        imageAlt: 'Aerial view of a wastewater treatment plant',
         paragraphs: [
           'WWTPs play a central role. They are designed to reduce nutrients and organic load, but not to completely break down persistent substances or heavy metals. For ZZS they therefore often act as a transfer station: the substances pass the treatment and end up in the effluent.',
           'Industrial estates require extra attention. Hundreds of small companies discharge collectively via one industrial sewer system. Individually the emissions seem limited, but together they form a considerable load. A WWTP mainly sees the sum, without it being directly visible which companies contribute the most.',
@@ -346,11 +352,13 @@ export const knowledgeArticles = {
   },
   '3': {
     title: 'Data as the foundation for future-proof water management',
-    image: '/assets/de-zuid-willemsvaart-vervuild-afvalwater-dreigt-via-de-rioolwaterzuivering-van-weert-in-dit-kanaal-te-belanden.webp',
+    image: '/assets/martensmultimedia-20220710-1495.jpg.webp',
     related: ['1', '2'],
     sections: [
       {
         heading: 'Introduction',
+        image: '/assets/martensmultimedia-20220710-1495.jpg.webp',
+        imageAlt: 'Aerial view of industrial and port area along the river',
         paragraphs: [
           'Effective water management starts with insight. Authorities have the crucial task of determining where supervision and measures are most needed: which companies pose the greatest risk, which substances require priority, and where the biggest chance of exceeding standards lies.',
           'A lot of valuable information is available, but it is often fragmented across different organizations and systems. This makes it difficult to get a complete and up-to-date picture. As a result, prioritization and decision-making often become complex and time-consuming, while there is a strong need for clear and targeted choices.',
@@ -365,6 +373,8 @@ export const knowledgeArticles = {
       },
       {
         heading: 'The importance of a data-driven foundation',
+        image: '/assets/waterkwaliteit_1140.png',
+        imageAlt: 'Underwater view of aquatic plants in freshwater',
         paragraphs: [
           'Without a central, data-driven approach, it takes a lot of effort to make well-founded choices. This leads to several challenges:',
           'Limited visibility of discharge flows — Supervision often focuses on larger, well-known companies. Without an integrated picture, other relevant flows remain easily overlooked.',
@@ -384,7 +394,7 @@ export const knowledgeArticles = {
   },
   '4': {
     title: 'Discharge permits are often outdated or incomplete',
-    image: '/assets/image_3.jpeg',
+    image: '/assets/Handhaving.jpg',
     related: ['1', '2'],
     sections: [
       {
@@ -396,6 +406,8 @@ export const knowledgeArticles = {
       },
       {
         heading: 'Permits that lag behind',
+        image: '/assets/Handhaving.jpg',
+        imageAlt: 'Water quality inspector with monitoring equipment',
         paragraphs: [
           'Many discharge permits date back to a time when knowledge of certain substances or attention to diffuse discharges was more limited than today.',
           'New substances out of scope – Substances such as PFAS or other Zeer Zorgwekkende Stoffen (ZZS, “very concerning substances”) are often not included in older permits, as they were not yet recognized.',
@@ -415,6 +427,8 @@ export const knowledgeArticles = {
       },
       {
         heading: 'Consequences for water quality and policy',
+        image: '/assets/d0577b45-3ded-40fa-bbea-3b70468273d9_thumb1920.jpg',
+        imageAlt: 'Dutch rural waterway landscape',
         paragraphs: [
           'Discharges within the rules – Companies discharge legally under their permits, but harmful substances still end up in the environment.',
           'Gaps in enforcement – Without a complete picture, inspectors lack the levers to identify risks in time.',
@@ -432,17 +446,21 @@ export const knowledgeArticles = {
   },
   '5': {
     title: 'PFAS and discharge permits: a current issue',
-    image: '/assets/image_4.jpeg',
+    image: '/assets/de-zuid-willemsvaart-vervuild-afvalwater-dreigt-via-de-rioolwaterzuivering-van-weert-in-dit-kanaal-te-belanden.webp',
     related: ['1', '2'],
     sections: [
       {
         heading: 'Introduction',
+        image: '/assets/de-zuid-willemsvaart-vervuild-afvalwater-dreigt-via-de-rioolwaterzuivering-van-weert-in-dit-kanaal-te-belanden.webp',
+        imageAlt: 'Polluted canal with algae overgrowth',
         paragraphs: [
           'Recently, H2O Actueel published an article about a permit application that would allow a certain amount of PFAS to be discharged annually via the sewer (source: H2O Waternetwerk, 25 August 2025). This sparked much debate, as WWTPs (wastewater treatment plants) are not designed to remove PFAS from wastewater. This raises the broader question: how should we handle permits for substances that hardly degrade and pose risks to the environment and health?',
         ],
       },
       {
         heading: 'Why this draws so much attention',
+        image: '/assets/ad09d958633e334321c7ebfaa2f7e1a14014256466d0f8a47593fdf398e7ecb4.jpg',
+        imageAlt: 'PFAS contaminated water warning sign in the Netherlands',
         paragraphs: [
           'PFAS is now high on the agenda of water managers and policymakers. This is because:',
           'Technical limitations WWTPs are designed for nutrients and organic matter, but persistent substances like PFAS pass through largely unhindered.',

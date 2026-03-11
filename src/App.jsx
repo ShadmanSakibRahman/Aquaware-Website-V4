@@ -648,6 +648,14 @@ function KnowledgeArticlePage() {
         {article.sections.map((section, i) => (
           <div key={section.heading} className='article-section reveal' style={{ transitionDelay: `${i * 0.07}s` }}>
             <h2>{section.heading}</h2>
+            {section.image && (
+              <img
+                className='article-section-img'
+                src={`${import.meta.env.BASE_URL}${section.image.slice(1)}`}
+                alt={section.imageAlt || section.heading}
+                loading='lazy'
+              />
+            )}
             {section.paragraphs.map((p, j) => <p key={j}>{p}</p>)}
           </div>
         ))}
