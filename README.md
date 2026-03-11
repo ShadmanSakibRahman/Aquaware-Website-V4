@@ -2,6 +2,8 @@
 
 **Control of Indirect Industrial Discharges**
 
+**Live Demo:** [https://shadmansakibrahman.github.io/Aquaware-Website-V4/](https://shadmansakibrahman.github.io/Aquaware-Website-V4/)
+
 AquaWare is a data-driven platform that provides governments with immediate insight into potential sources of SVHCs (Substances of Very High Concern) and WFD (Water Framework Directive) priority substances, enabling proactive action towards WFD objectives.
 
 > *"With AquaWare we want to build a future together in which clean water is the standard."*
@@ -115,10 +117,10 @@ AquaWare uses a funnel-based approach:
 
 ```bash
 # Clone the repository
-git clone https://github.com/ShadmanSakibRahman/Aquaware-Website-V3.git
+git clone https://github.com/ShadmanSakibRahman/Aquaware-Website-V4.git
 
 # Navigate to project directory
-cd Aquaware-Website-V3
+cd Aquaware-Website-V4
 
 # Install dependencies
 npm install
