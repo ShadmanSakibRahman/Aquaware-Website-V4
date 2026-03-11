@@ -17,7 +17,8 @@
       "Bash(cd \"D:/AquaWare Website V3\" && npm run build 2>&1)",
       "Bash(npx vercel:*)",
       "Bash(npx netlify-cli:*)",
-      "Bash(cd \"D:/AquaWare Website V3\" && npm install --save-dev gh-pages 2>&1)"
+      "Bash(cd \"D:/AquaWare Website V3\" && npm install --save-dev gh-pages 2>&1)",
+      "Bash(cd \"D:/AquaWare Website V3\" && npm run build 2>&1 && cp dist/index.html dist/404.html)"
     ]
   }
 }

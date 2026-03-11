@@ -190,7 +190,7 @@ function useReveal() {
 ───────────────────────────────────────────────────── */
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='/Aquaware-Website-V4'>
       <Routes>
         <Route element={<SiteShell />}>
           <Route path='/'                       element={<HomePage />} />
