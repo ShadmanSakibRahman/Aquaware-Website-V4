@@ -577,7 +577,13 @@ function AboutPage() {
 /* ─────────────────────────────────────────────────────
    Knowledge Page
 ───────────────────────────────────────────────────── */
-const ARTICLE_ICONS = ['🌊', '💧', '📊', '🔬', '🌍']
+const KNOWLEDGE_IMAGES = [
+  '/assets/Lozingen_afvalstoffen_bedreigen_waterkwaliteit_-_Drinkwaterplatform.jpeg',
+  '/assets/rwzi-zwolle-2.jpg',
+  '/assets/Dashboard_AquaWare_industriele_lozingen.png',
+  '/assets/de-zuid-willemsvaart-vervuild-afvalwater-dreigt-via-de-rioolwaterzuivering-van-weert-in-dit-kanaal-te-belanden.webp',
+  '/assets/Handhaving.jpg',
+]
 
 function KnowledgePage() {
   useReveal()
@@ -591,7 +597,12 @@ function KnowledgePage() {
       <div className='knowledge-grid'>
         {knowledge.list.map((item, i) => (
           <Link to={`/knowledge/${item.id}`} key={item.id} className='knowledge-card reveal' style={{ transitionDelay: `${i * 0.08}s` }}>
-            <div className='knowledge-card-img-placeholder'>{ARTICLE_ICONS[i % ARTICLE_ICONS.length]}</div>
+            <img
+              className='knowledge-card-img'
+              src={`${import.meta.env.BASE_URL}${KNOWLEDGE_IMAGES[i].slice(1)}`}
+              alt={item.title}
+              loading='lazy'
+            />
             <div className='knowledge-card-body'>
               <h3>{item.title}</h3>
               <p>{item.quote}</p>

@@ -818,20 +818,17 @@ p  { color: var(--muted); font-size: 1.025rem; line-height: 1.72; }
 }
 .knowledge-card-img {
   width: 100%;
-  height: 200px;
+  height: 220px;
   object-fit: cover;
   object-position: center;
   background: linear-gradient(135deg, #dceef8, #c8e2f0);
+  transition: transform 0.4s var(--ease);
 }
-.knowledge-card-img-placeholder {
-  width: 100%;
-  height: 200px;
-  background: linear-gradient(135deg, rgba(200,235,248,0.8), rgba(180,225,245,0.6));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2.5rem;
-  opacity: 0.7;
+.knowledge-card:hover .knowledge-card-img {
+  transform: scale(1.04);
+}
+.knowledge-card {
+  overflow: hidden;
 }
 .knowledge-card-body {
   padding: 1.5rem;
